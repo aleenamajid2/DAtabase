@@ -1,0 +1,60 @@
+Use world;
+Show tables;
+DESCRIBE city;
+DESCRIBE country;
+DESCRIBE countrylanguage;
+
+SELECT COUNT(name) FROM city where CountryCode = 'USA';
+
+SELECT LifeExpectancy, Population FROM country where name = 'Argentina';
+
+SELECT * FROM country where LifeExpectancy IS NOT NULL ORDER BY LifeExpectancy  DESC LIMIT 10;
+
+SELECT * 
+FROM country t1 
+JOIN city t2 ON t1.capital=t2.ID;
+
+SELECT Code FROM country where Region = 'Southeast Asia';
+SELECT language , countrycode, code, region
+FROM country t1 
+JOIN countrylanguage t2 ON t1.Code=t2.CountryCode;
+
+SELECT COUNT(name) FROM city where CountryCode = 'USA';
+
+CREATE VIEW result
+AS
+	SELECT Code 
+    FROM country 
+    where Region = 'Southeast Asia';
+SELECT Distinct language 
+FROM result t1 
+JOIN countrylanguage t2 ON t1.Code=t2.CountryCode;
+
+SELECT name FROM city WHERE name LIKE 'f%' LIMIT 25;
+
+SELECT COUNT(ID)
+FROM city c
+LEFT JOIN country co ON co.Code = c.CountryCode
+WHERE co.Name = 'China';
+
+SELECT COUNT(name) AS Countries FROM country;
+
+SELECT Name
+FROM country
+ORDER BY SurfaceArea DESC
+LIMIT 10;
+
+SELECT name, population FROM city WHERE countrycode = 'JPN' ORDER BY population DESC LIMIT 5; 
+
+
+SELECT *
+FROM (
+    SELECT Name, Population, SurfaceArea, (Population/SurfaceArea) AS Ratio
+    FROM country
+    WHERE Population IS NOT NULL
+    AND Population!=0
+) AS PopulationToAreaRatio
+ORDER BY Ratio
+LIMIT 10;
+
+SELECT DISTINCT language FROM countrylanguage;
