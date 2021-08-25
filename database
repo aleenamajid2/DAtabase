@@ -1,0 +1,92 @@
+1.	Using COUNT, get the number of cities in the USA.
+274
+2.	Find out the population and life expectancy for people in Argentina.
+Life expectancy: 75.1
+Population: 37032000
+
+3.	Using IS NOT NULL, ORDER BY, and LIMIT, which country has the highest life expectancy?
+Andorra
+
+4.	Using JOIN ... ON, find the capital city of Spain.
+Madrid
+
+5.	Using JOIN ... ON, list all the languages spoken in the Southeast Asia region.
+47
+
+6.	Using a single query, list 25 cities around the world that start with the letter F
+'Fagatogo'
+'Florencio Varela'
+'Formosa'
+'Francistown'
+'Fortaleza'
+'Feira de Santana'
+'Franca'
+'FlorianÃ³polis'
+'Foz do IguaÃ§u'
+'Ferraz de Vasconcelos'
+'Francisco Morato'
+'Franco da Rocha'
+'Fuenlabrada'
+'Faridabad'
+'Firozabad'
+'Farrukhabad-cum-Fatehgarh'
+'Faizabad'
+'Fatehpur'
+'Firenze'
+'Foggia'
+'Ferrara'
+'ForlÃ¬'
+'Fukuoka'
+'Funabashi'
+'Fukuyama'
+
+7.	Using COUNT and JOIN ... ON, get the number of cities in China.
+363
+
+8.	Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations.
+'PCN', 'Pitcairn', 'Oceania', 'Polynesia', '49.00', NULL, '50', NULL, '0.00', NULL, 'Pitcairn', 'Dependent Territory of the UK', 'Elisabeth II', '2912', 'PN'
+
+9.	Using aggregate functions, return the number of countries the database contains.
+239
+
+10.	What are the top ten largest countries by area?
+'Russian Federation', '17075400.00'
+'Antarctica', '13120000.00'
+'Canada', '9970610.00'
+'China', '9572900.00'
+'United States', '9363520.00'
+'Brazil', '8547403.00'
+'Australia', '7741220.00'
+'India', '3287263.00'
+'Argentina', '2780400.00'
+'Kazakstan', '2724900.00'
+
+11.	List the five largest cities by population in Japan.
+'Tokyo', '7980230'
+'Jokohama [Yokohama]', '3339594'
+'Osaka', '2595674'
+'Nagoya', '2154376'
+'Sapporo', '1790886'
+
+12.	List the names and country codes of every country with Elizabeth II as its Head of State. You will need to fix the mistake first!
+
+13.	List the top ten countries with the smallest population-to-area ratio. Discard any countries with a ratio of 0.
+
+'Greenland', '56000', '2166090.00', '0.025853'
+'Svalbard and Jan Mayen', '3200', '62422.00', '0.051264'
+'Falkland Islands', '2000', '12173.00', '0.164298'
+'Pitcairn', '50', '49.00', '1.020408'
+'Western Sahara', '293000', '266000.00', '1.101504'
+'Mongolia', '2662000', '1566500.00', '1.699330'
+'French Guiana', '181000', '90000.00', '2.011111'
+'Namibia', '1726000', '824292.00', '2.093918'
+'Australia', '18886000', '7741220.00', '2.439667'
+'Suriname', '417000', '163265.00', '2.554130'
+
+14.	List every unique world language.
+SELECT DISTINCT language FROM countrylanguage;
+
+15.	List the names and GNP of the world's top 10 richest countries.
+16.	List the names of, and number of languages spoken by, the top ten most multilingual countries.
+17.	List every country where over 50% of its population can speak German.
+18.	Which country has the worst life expectancy? Discard zero or null values.
